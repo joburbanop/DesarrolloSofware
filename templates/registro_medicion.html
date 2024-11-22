@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style4.css">
+    <title>Registro de Medición</title>
+</head>
+<body>
+    <header>
+        <h1 class="form-title">Registro de Datos de Medición/Hábito</h1>
+    </header>
+    <div class="form-container">
+        <form method="POST">
+            <div class="form-group">
+                <label for="tabaquismo">Número de Cigarrillos Fumados:</label>
+                <input type="number" id="tabaquismo" name="tabaquismo" placeholder="Ingrese el número de cigarrillos" min="0" max="100" required>
+            </div>
+            <div class="form-group">
+                <label for="PA">Presión Arterial:</label>
+                <input type="number" id="PA" name="PA" placeholder="Ingrese la presión arterial" min="50" max="200" required>
+            </div>
+            <button type="submit" class="btn-submit">Registrar</button>
+        </form>
+    </div>
+    <footer>
+        <p>© 2024 Sistema de Registro de RCV</p>
+    </footer>
+</body>
+</html>

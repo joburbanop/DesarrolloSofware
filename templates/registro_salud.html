@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style3.css">
+    <title>Registro de Salud</title>
+    <script>
+       
+        function validarFormulario(event) {
+            const cHDL = document.getElementById("cHDL").value;
+            const CT = document.getElementById("CT").value;
+
+            if (cHDL < 0 || cHDL > 100) {
+                alert("El valor de Colesterol HDL debe estar entre 0 y 100.");
+                event.preventDefault();
+            }
+
+            if (CT < 0 || CT > 300) {
+                alert("El valor de Colesterol Total debe estar entre 0 y 300.");
+                event.preventDefault();
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 class="form-title">Registro de Datos de Salud</h1>
+    </header>
+    <div class="form-container">
+        <form method="POST" onsubmit="validarFormulario(event)">
+            <div class="form-group">
+                <label for="cHDL">Colesterol HDL (cHDL):</label>
+                <input type="number" id="cHDL" name="cHDL" placeholder="Ingrese el nivel de cHDL" min="0" max="100" required>
+            </div>
+            <div class="form-group">
+                <label for="CT">Colesterol Total (CT):</label>
+                <input type="number" id="CT" name="CT" placeholder="Ingrese el nivel de CT" min="0" max="300" required>
+            </div>
+            <button type="submit" class="btn-submit">Registrar</button>
+        </form>
+    </div>
+    <footer>
+        <p>© 2024 Sistema de Registro de RCV</p>
+    </footer>
+</body>
+</html>

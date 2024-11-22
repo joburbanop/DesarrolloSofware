@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Estudiante</title>
+</head>
+<body>
+    <h1>Datos del Estudiante</h1>
+    <p><strong>Facultad:</strong> {{ datos.facultad }}</p>
+    <p><strong>Programa:</strong> {{ datos.programa }}</p>
+    <p><strong>ID:</strong> {{ datos.estudiante.id }}</p>
+    <p><strong>Nombre:</strong> {{ datos.estudiante.nombre }}</p>
+    <p><strong>Apellido:</strong> {{ datos.estudiante.apellido }}</p>
+    <p><strong>Fecha de Nacimiento:</strong> {{ datos.estudiante.fecha_nacimiento }}</p>
+    <p><strong>Sexo:</strong> {{ datos.estudiante.sexo }}</p>
+    <p><strong>Antecedentes Familiares:</strong> {{ datos.estudiante.antecedentes }}</p>
+    <h2>Datos de Examen</h2>
+    <ul>
+        {% for examen in datos.datos_examen %}
+            <li>cHDL: {{ examen.cHDL }}, CT: {{ examen.CT }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

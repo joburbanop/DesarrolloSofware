@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style2.css">
+    <title>Sistema de Registro de RCV</title>
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="title">Sistema de Registro de RCV</h1>
+    </header>
+    <main class="main-content">
+        <div class="card">
+            <h2>Seleccione una opción</h2>
+            <div class="buttons-container">
+                <a href="{{ url_for('registro_basico') }}" class="button">Registrar Datos Básicos</a>
+                <a href="{{ url_for('registro_salud') }}" class="button">Registrar Datos de Salud</a>
+                <a href="{{ url_for('registro_medicion') }}" class="button">Registrar Datos de Medición/Hábito</a>
+            </div>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <p>© 2024 Sistema de Registro de RCV - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
